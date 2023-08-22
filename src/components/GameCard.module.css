@@ -1,0 +1,20 @@
+.card {
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+.thumb {
+  border-radius: 24px;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likeBtn {
+  background: none;
+  border: none;
+  font-size: 24px;
+}
