@@ -24,7 +24,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to={"/"}
+              to={"/mygames"}
               onClick={() => setPage("my-games")}
               className={`${styles.link} ${
                 page === "my-games" && styles.active
@@ -36,7 +36,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to={"/"}
+              to={"/explore"}
               onClick={() => setPage("explore")}
               className={`${styles.link} ${
                 page === "explore" && styles.active
@@ -48,7 +48,7 @@ const Header = () => {
           </li>
           <li>
             <Link
-              to={"/"}
+              to={"/active"}
               onClick={() => setPage("active")}
               className={`${styles.link} ${page === "active" && styles.active}`}
             >
