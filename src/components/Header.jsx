@@ -11,46 +11,52 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Link
-          to={"/"}
-          onClick={() => setPage("home")}
-          className={`${styles.link} ${page === "home" && styles.active}`}
-        >
-          <span>
-            <BiCrown className={styles.headerIcons} />
-            Home
-          </span>
-        </Link>
-        <Link
-          to={"/"}
-          onClick={() => setPage("my-games")}
-          className={`${styles.link} ${page === "my-games" && styles.active}`}
-        >
-          <span>
-            <BiJoystick className={styles.headerIcons} />
-            My Games
-          </span>
-        </Link>
-        <Link
-          to={"/"}
-          onClick={() => setPage("explore")}
-          className={`${styles.link} ${page === "explore" && styles.active}`}
-        >
-          <span>
-            <AiOutlineInbox className={styles.headerIcons} />
-            Explore
-          </span>
-        </Link>
-        <Link
-          to={"/"}
-          onClick={() => setPage("active")}
-          className={`${styles.link} ${page === "active" && styles.active}`}
-        >
-          <span>
-            <AiOutlineThunderbolt className={styles.headerIcons} />
-            Active
-          </span>
-        </Link>
+        <ul>
+          <li>
+            <Link
+              to={"/"}
+              onClick={() => setPage("home")}
+              className={`${styles.link} ${page === "home" && styles.active}`}
+            >
+              <BiCrown className={styles.headerIcons} />
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/"}
+              onClick={() => setPage("my-games")}
+              className={`${styles.link} ${
+                page === "my-games" && styles.active
+              }`}
+            >
+              <BiJoystick className={styles.headerIcons} />
+              My Games
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/"}
+              onClick={() => setPage("explore")}
+              className={`${styles.link} ${
+                page === "explore" && styles.active
+              }`}
+            >
+              <AiOutlineInbox className={styles.headerIcons} />
+              Explore
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={"/"}
+              onClick={() => setPage("active")}
+              className={`${styles.link} ${page === "active" && styles.active}`}
+            >
+              <AiOutlineThunderbolt className={styles.headerIcons} />
+              Active
+            </Link>
+          </li>
+        </ul>
       </nav>
       <BsPerson className={styles.headerIcons} />
     </header>

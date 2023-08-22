@@ -1,36 +1,40 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  justify-content: space-between;
+  padding: 12px 24px;
+  color: #78828a;
+  font-weight: 500;
 }
 
 .nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 44px;
+  justify-content: center;
   margin: 0 auto;
 }
 
-.nav span {
+.nav ul {
+  list-style: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 16px;
-  font-weight: 500;
-  padding: 8px 10px;
-}
-
-.headerIcons {
-  font-size: 24px;
-  color: #78828a;
+  gap: 44px;
 }
 
 .link {
   text-decoration: none;
   color: #78828a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 12px;
 }
 
 .active {
   border-bottom: 2px solid #1ca1d0;
+}
+
+.headerIcons {
+  font-size: 22px;
 }
