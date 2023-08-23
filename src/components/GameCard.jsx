@@ -10,7 +10,10 @@ const GameCard = ({ data }) => {
   const handleLike = (data) => {
     const isGameLiked = likedList.some((item) => item.id === data.id);
 
-    if (!isGameLiked) {
+    if (isGameLiked) {
+      const updatedLikedList = likedList.filter((item) => item.id !== data.id);
+      setLikedList(updatedLikedList);
+    } else {
       const newLikedList = [...likedList, data];
       setLikedList(newLikedList);
     }
