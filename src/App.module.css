@@ -1,4 +1,6 @@
 .main {
-  background-image: url("./assets/background.jpg");
-  background-repeat: no-repeat;
+  background-image: linear-gradient(#020c32, #1234ae);
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
