@@ -27,25 +27,25 @@ const Filters = () => {
           All
         </button>
         <button
-          onClick={() => setCategory("shooter")}
+          onClick={() => setCategory("Shooter")}
           className={`${styles.categoriesFilter} ${
-            category === "shooter" && styles.active
+            category === "Shooter" && styles.active
           }`}
         >
           Shooter
         </button>
         <button
-          onClick={() => setCategory("mmorpg")}
+          onClick={() => setCategory("Fighting")}
           className={`${styles.categoriesFilter} ${
-            category === "mmorpg" && styles.active
+            category === "Fighting" && styles.active
           }`}
         >
-          MMORPG
+          Fighting
         </button>
         <button
-          onClick={() => setCategory("moba")}
+          onClick={() => setCategory("MOBA")}
           className={`${styles.categoriesFilter} ${
-            category === "moba" && styles.active
+            category === "MOBA" && styles.active
           }`}
         >
           Moba
