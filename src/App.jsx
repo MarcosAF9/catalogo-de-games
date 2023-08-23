@@ -6,20 +6,23 @@ import Explore from "./pages/Explore";
 import MyGames from "./pages/MyGames";
 import Home from "./pages/Home";
 import Active from "./pages/Active";
+import CategoryProvider from "./context/CategoryProvider";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/mygames" element={<MyGames />} />
-        <Route path="/explore" element={<Explore />} />
-        <Route path="/active" element={<Active />} />
-      </Routes>
-    </>
+    <CategoryProvider>
+      <div className={styles.main}>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mygames" element={<MyGames />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/active" element={<Active />} />
+        </Routes>
+      </div>
+    </CategoryProvider>
   );
 }
 

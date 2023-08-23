@@ -12,7 +12,7 @@ const GameCard = ({ data }) => {
           <BsBookmark />
         </button>
       </div>
-      {data.genre}
+      <p>{data.genre}</p>
     </div>
   );
 };

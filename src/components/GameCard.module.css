@@ -1,20 +1,31 @@
 .card {
   width: max-content;
   margin-bottom: 20px;
+
+  > p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+  }
 }
 
 .thumb {
   border-radius: 24px;
+  margin-bottom: 16px;
 }
 
 .infos {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
 }
 
 .likeBtn {
   background: none;
   border: none;
   font-size: 24px;
+  color: #fff;
+  margin-top: 4px;
 }

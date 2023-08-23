@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import GameCard from "../components/GameCard";
 import styles from "./Explore.module.css";
+import Filters from "../components/Filters";
+import CategoryContext from "../context/CategoryContext";
 
 const Explore = () => {
   const [data, setData] = useState([]);
+  const { category } = useContext(CategoryContext);
 
   useEffect(() => {
     const fetchData = async () => {
-      const url =
-        "https://free-to-play-games-database.p.rapidapi.com/api/games?category=shooter";
+      let url = `https://free-to-play-games-database.p.rapidapi.com/api/games`;
+      if (category !== "all") {
+        url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
+      }
       const options = {
         method: "GET",
         headers: {
@@ -27,11 +32,12 @@ const Explore = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [category]);
 
   return (
     <div className={styles.container}>
       <h1>Explore</h1>
+      <Filters />
       <div className={styles.grid}>
         {data.length > 0 &&
           data.map((game, index) => <GameCard key={index} data={game} />)}

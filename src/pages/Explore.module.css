@@ -1,6 +1,12 @@
 .container {
   border: 2px solid red;
   margin: 0 auto;
+  padding: 20px;
+
+  > h1 {
+    color: #f9f9f9;
+    margin-bottom: 16px;
+  }
 }
 
 .grid {
