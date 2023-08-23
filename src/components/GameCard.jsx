@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { BsBookmark } from "react-icons/bs";
+import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
 import styles from "./GameCard.module.css";
 import CategoryContext from "../context/CategoryContext";
 
@@ -25,10 +25,10 @@ const GameCard = ({ data }) => {
       <div className={styles.infos}>
         <p>{data.title}</p>
         <button
-          className={`${styles.likeBtn} ${isGameLiked ? styles.liked : ""}`}
+          className={`${styles.likeBtn} `}
           onClick={() => handleLike(data)}
         >
-          <BsBookmark />
+          {isGameLiked ? <BsBookmarkFill /> : <BsBookmark />}
         </button>
       </div>
       <p>{data.genre}</p>
